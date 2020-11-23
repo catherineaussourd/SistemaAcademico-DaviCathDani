@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Turma.removerTurmaController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #18212A;" />
+      <AnchorPane fx:id="addAluno" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <AnchorPane prefHeight="720.0" prefWidth="290.0" style="-fx-background-color: #142d4c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="118.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TURMA" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="30.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/escola.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text layoutX="363.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código: ">
+               <font>
+                  <Font name="Arial Black" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="codigoTurma" layoutX="457.0" layoutY="100.0" prefHeight="25.0" prefWidth="185.0" promptText="Código" />
+            <AnchorPane fx:id="Turma" layoutX="353.0" layoutY="149.0" prefHeight="493.0" prefWidth="643.0">
+               <children>
+                  <Text layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código da Disciplina: " wrappingWidth="249.3583984375">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="codigoDisciplina" layoutX="257.0" layoutY="44.0" prefHeight="25.0" prefWidth="210.0" promptText="Código" styleClass="text-field" />
+                  <Text layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tamanho da Turma:" wrappingWidth="249.3583984375">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horários:" wrappingWidth="121.640625">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="removeButton" layoutX="238.0" layoutY="428.0" mnemonicParsing="false" onAction="#deletarTurma" prefHeight="51.0" prefWidth="354.0" text="Deletar Turma">
+                     <font>
+                        <Font name="Arial Black" size="23.0" />
+                     </font>
+                  </Button>
+                  <Text layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF do Professor:" wrappingWidth="209.640625">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="cpfProfessor" layoutX="219.0" layoutY="81.0" prefHeight="25.0" prefWidth="249.0" promptText="CPF" styleClass="text-field" />
+                  <TextField fx:id="horariosTurma" layoutX="113.0" layoutY="119.0" prefHeight="25.0" prefWidth="354.0" promptText="Horários" styleClass="text-field" />
+                  <TextField fx:id="tamanhoAlunos" layoutX="238.0" layoutY="156.0" prefHeight="25.0" prefWidth="229.0" promptText="Tamanho da Turma" styleClass="text-field" />
+                  <Text layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alunos:" wrappingWidth="93.3515625">
+                     <font>
+                        <Font name="Arial Black" size="21.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="tableViewTurma" layoutX="110.0" layoutY="193.0" prefHeight="217.0" prefWidth="476.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumnTurma" prefWidth="237.0" text="Nome" />
+                      <TableColumn fx:id="cpfColumnTurma" prefWidth="238.0" text="CPF" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="cancelar" layoutX="-2.0" layoutY="428.0" mnemonicParsing="false" onAction="#cancelarButtonPress" prefHeight="51.0" prefWidth="229.0" text="Cancelar">
+                     <font>
+                        <Font name="Arial Black" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button fx:id="searchTurma" layoutX="674.0" layoutY="99.0" mnemonicParsing="false" onAction="#buscarTurma" prefHeight="25.0" prefWidth="105.0" text="Buscar Turma" />
+            <Text layoutX="371.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DELETAR TURMA" textAlignment="CENTER" wrappingWidth="541.7509765625">
+               <font>
+                  <Font name="Arial Black" size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

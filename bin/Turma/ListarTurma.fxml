@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Turma.listarTurmaController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #18212A;" />
+      <AnchorPane fx:id="addAluno" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <AnchorPane prefHeight="720.0" prefWidth="290.0" style="-fx-background-color: #142d4c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="118.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TURMA" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="30.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/escola.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text layoutX="371.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA DE TURMAS" textAlignment="CENTER" wrappingWidth="541.7509765625">
+               <font>
+                  <Font name="Arial Black" size="37.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tableView" layoutX="304.0" layoutY="93.0" prefHeight="562.0" prefWidth="706.0">
+              <columns>
+                <TableColumn fx:id="codigoColumn" prefWidth="103.0" text="Código" />
+                  <TableColumn fx:id="codigoDisciplinaColumn" prefWidth="132.0" text="Código Disciplina" />
+                  <TableColumn fx:id="cpfProfessorColumn" prefWidth="108.0" text="CPF Professor" />
+                  <TableColumn fx:id="horarioColumn" prefWidth="90.0" text="Horário" />
+                  <TableColumn fx:id="numeroAlunosColumn" prefWidth="126.0" text="Numero de Alunos" />
+                  <TableColumn fx:id="alunosColumn" prefWidth="146.0" text="Alunos" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

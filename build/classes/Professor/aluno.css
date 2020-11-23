@@ -1,0 +1,4 @@
+.text-field:disabled,
+.text-area:disabled {
+    -fx-background-color: #D3D3D3;
+}

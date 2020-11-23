@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Aluno.listarAlunoController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #18212A;" />
+      <AnchorPane fx:id="addAluno" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #FAFAFA;">
+         <children>
+            <AnchorPane prefHeight="720.0" prefWidth="290.0" style="-fx-background-color: #142d4c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="80.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALUNO" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Black" size="50.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="104.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/aluna.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text layoutX="371.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTA DE ALUNOS" textAlignment="CENTER" wrappingWidth="541.7509765625">
+               <font>
+                  <Font name="Arial Black" size="37.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tableView" layoutX="293.0" layoutY="123.0" prefHeight="581.0" prefWidth="729.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Nome" />
+                <TableColumn fx:id="cpfColumn" prefWidth="75.0" text="CPF" />
+                  <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="sexoColumn" prefWidth="75.0" text="Sexo" />
+                  <TableColumn fx:id="telefoneColumn" prefWidth="75.0" text="Telefone" />
+                  <TableColumn fx:id="ruaColumn" prefWidth="75.0" text="Rua" />
+                  <TableColumn fx:id="numeroColumn" prefWidth="75.0" text="Numero" />
+                  <TableColumn fx:id="cepColumn" prefWidth="75.0" text="CEP" />
+                  <TableColumn fx:id="cidadeColumn" prefWidth="75.0" text="Cidade" />
+                  <TableColumn fx:id="bairroColumn" prefWidth="75.0" text="Bairro" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
